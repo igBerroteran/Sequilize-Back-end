@@ -1,0 +1,24 @@
+####PRIMERO QUE NADA SE RECOMIENDA BAJAR Y VOLVER A SUNIR EL CONTENEDOR
+docker-postgres up
+docker-postgres down
+docker-postgres ps
+
+
+psql -h localhost -d my_store -U nico
+
+
+conectarse a una interfaz
+
+ docker compose up -d pgadmin
+
+
+run servidor en el puerto
+ sudo docker-compose ps
+
+
+#para remover los servidores iniciados antiguos
+
+
+#Para el entorno
+> npm i dotenv
+
