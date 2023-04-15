@@ -7,7 +7,7 @@ docker-postgres ps
 psql -h localhost -d my_store -U nico
 
 
-conectarse a una interfaz
+#conectarse a una interfaz
 
  docker compose up -d pgadmin
 
@@ -22,3 +22,16 @@ run servidor en el puerto
 #Para el entorno
 > npm i dotenv
 
+#Aplicar una migracion
+npm run migrations:run
+#Tambien para generar una migracion.
+npm run migrations:generate change-user-id
+
+
+
+
+#Para levantar el servicio de mysql
+docker-composer up -d mysql
+
+#ver si esta corriendo
+docker-compose ps
