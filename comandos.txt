@@ -16,6 +16,10 @@ run servidor en el puerto
  sudo docker-compose ps
 
 
+#matar el puerto: sudo lsof -i :3000
+kill -9 <PID>
+
+
 #para remover los servidores iniciados antiguos
 
 

@@ -9,5 +9,5 @@ module.exports = {
 
   down: async (queryInterface) => {
     await queryInterface.removeColumn(USER_TABLE, 'role');
-  },
+  }
 };

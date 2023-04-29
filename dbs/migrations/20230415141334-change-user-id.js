@@ -1,19 +1,13 @@
 'use strict';
-const { DataTypes } = require('sequelize');
 
-const { CUSTOMER_TABLE } = require('./../models/customer.model');
+const { OrderSchema, ORDER_TABLE } = require('./../models/order.model');
 
 module.exports = {
   up: async (queryInterface) => {
-    await queryInterface.changeColumn(CUSTOMER_TABLE, 'user_id', {
-      field: 'user_id',
-      allowNull: false,
-      type: DataTypes.INTEGER,
-      unique: true,
-    });
+    await queryInterface.createTable(ORDER_TABLE, OrderSchema);
   },
 
   down: async (queryInterface) => {
-    //await queryInterface.dropTable(CUSTOMER_TABLE);
-  },
+    await queryInterface.dropTable(ORDER_TABLE);
+  }
 };
